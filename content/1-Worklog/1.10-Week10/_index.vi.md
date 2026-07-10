@@ -1,59 +1,30 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng giao diện hiển thị lịch trình hành trình chi tiết theo trục thời gian (Timeline) và tích hợp bản đồ trực quan.
+* Tối ưu hóa khả năng hiển thị tương thích (Responsive Design) trên các thiết bị di động.
+* Tham gia kiểm thử hệ thống từ đầu đến cuối (End-to-End Test) và phối hợp sửa lỗi (bug fixing).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | **Thiết kế giao diện hiển thị Timeline lịch trình** <br> - Lập trình component Timeline hiển thị thông tin chi tiết các ngày, địa điểm và thời gian hoạt động của chuyến đi nhận từ AI. <br> - Căn chỉnh CSS hiển thị đẹp mắt, rõ ràng cho các mốc thời gian. | 22/06/2026 | 22/06/2026 | |
+| 3 | **Tích hợp bản đồ trực quan hóa địa điểm** <br> - Tích hợp thư viện bản đồ (như Mapbox hoặc OpenStreetMap) để hiển thị vị trí các địa điểm du lịch trong hành trình. <br> - Vẽ các điểm marker định vị địa điểm tương ứng với từng chặng trên Timeline. | 23/06/2026 | 23/06/2026 | |
+| 4 | **Tối ưu hóa thiết kế Responsive trên Mobile** <br> - Sử dụng CSS Media Queries để điều chỉnh giao diện hiển thị tối ưu trên màn hình điện thoại di động và máy tính bảng. <br> - Điều chỉnh layout sidebar và bản đồ sang dạng cuộn đứng để nâng cao trải nghiệm người dùng. | 24/06/2026 | 24/06/2026 | |
+| 5 | **Tham gia kiểm thử End-to-End (E2E) lần đầu** <br> - Kết nối hoàn chỉnh từ giao diện Frontend qua API Gateway đến Lambda AI và hiển thị dữ liệu lịch trình thực tế. <br> - Thực hiện kiểm thử toàn bộ luồng sử dụng cùng cả nhóm (bấm nút → nhận lịch trình trực tiếp). | 25/06/2026 | 25/06/2026 | |
+| 6 | **Họp nhóm tổng kết & Khắc phục lỗi tích hợp** <br> - Phối hợp sửa các lỗi phát sinh trong quá trình truyền dữ liệu (như parse lỗi JSON, hiển thị sai định dạng ngày/tháng). <br> - Cập nhật các bản vá lỗi và tối ưu hiệu năng hiển thị cho các component giao diện. | 26/06/2026 | 26/06/2026 | |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Thứ 2 (22/06/2026):** Hoàn thành component Timeline hiển thị chi tiết lịch trình chuyến đi theo thời gian trực quan.
+* **Thứ 3 (23/06/2026):** Tích hợp thành công bản đồ hiển thị các điểm Marker địa điểm du lịch tương ứng với lịch trình.
+* **Thứ 4 (24/06/2026):** Tối ưu hóa thành công giao diện tương thích (Responsive) giúp hiển thị mượt mà trên thiết bị di động.
+* **Thứ 5 (25/06/2026):** Tham gia cùng nhóm hoàn thành bài test End-to-End đầu tiên, kiểm chứng luồng hoạt động từ Frontend lên AWS.
+* **Thứ 6 (26/06/2026):** Khắc phục triệt để các lỗi parse dữ liệu JSON từ AI phản hồi về và chốt bản thử nghiệm hoạt động ổn định.

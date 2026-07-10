@@ -1,58 +1,31 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-05-25
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các khái niệm cơ bản về Cơ sở dữ liệu: Transaction Log, Buffer, Khóa chính/Khóa ngoại, Index và phân biệt SQL vs NoSQL.
+* Hiểu cách sử dụng và cấu hình dịch vụ Amazon RDS & Amazon Aurora cho các ứng dụng giao dịch (OLTP).
+* Tìm hiểu kiến trúc dịch vụ kho dữ liệu Amazon Redshift và Redshift Spectrum cho các tác vụ phân tích dữ liệu lớn (OLAP).
+* Tìm hiểu cơ chế quản lý tập trung nhiều tài khoản với AWS Organizations và kiểm tra an toàn cấu hình hệ thống với AWS Security Hub.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | **Cơ sở dữ liệu căn bản & Quản trị tài khoản AWS Organizations** <br> - **Database Concepts**: Định nghĩa CSDL, khái niệm Phiên (Session), Khóa chính/ngoại, thiết lập Index, Partitioning, và Execution Plan. <br> - **AWS Organizations**: Quản lý nhiều tài khoản tập trung qua Organizational Unit (OU), gom hóa đơn qua Consolidated Billing, và kiểm soát quyền cao nhất bằng Service Control Policies (SCP) áp dụng "deny-based policy". | 25/05/2026 | 25/05/2026 | <https://docs.aws.amazon.com/organizations/> |
+| 3 | **Phân loại Cơ sở dữ liệu & Tìm hiểu dịch vụ Amazon RDS / Amazon Aurora** <br> - **Cơ chế hoạt động**: Tìm hiểu Database Log (phục hồi/đồng bộ dữ liệu) và Buffer (bộ đệm tăng tốc độ truy xuất). <br> - **Phân loại CSDL**: So sánh SQL (RDBMS) và NoSQL (Document, Key-value, Wide-column, Graph). <br> - **Amazon RDS**: Dịch vụ RDBMS được quản lý bởi AWS (MySQL, PostgreSQL, MS SQL, Oracle, MariaDB), hỗ trợ tự động sao lưu, Read Replica (phục vụ read workload và có thể tách thành Primary), Multi-AZ (tự động failover), mã hóa at-rest/in-transit và Auto-scaling. | 26/05/2026 | 26/05/2026 | <https://docs.aws.amazon.com/rds/> |
+| 4 | **Khám phá Amazon Redshift (Dịch vụ Data Warehouse)** <br> - Tìm hiểu Amazon Redshift: dịch vụ kho dữ liệu (Data Warehouse) được quản lý bởi AWS, dựa trên PostgreSQL và được tối ưu cho các tác vụ phân tích (OLAP). <br> - Nghiên cứu cấu trúc phân tán: Kiến trúc xử lý song song Massively-Parallel Processing (MPP), dữ liệu được phân chia sang các Compute node dưới sự điều phối của Leader Node. <br> - Tìm hiểu Columnar Storage (lưu trữ cột) để tối ưu hóa truy vấn phân tích, và kết nối qua SQL, JDBC, ODBC. | 27/05/2026 | 27/05/2026 | <https://docs.aws.amazon.com/redshift/> |
+| 5 | **Nghiên cứu kiến trúc truy vấn Redshift & Redshift Spectrum** <br> - Phân tích luồng truy vấn từ client thông qua JDBC/ODBC tới Leader node, sau đó Leader node phân phối tác vụ song song xuống các Compute node. <br> - Tìm hiểu tính năng Redshift Spectrum để thực hiện truy vấn trực tiếp trên dữ liệu nằm ngoài cluster (lưu trữ trên S3), giúp tối ưu hóa chi phí lưu trữ. | 28/05/2026 | 28/05/2026 | <https://docs.aws.amazon.com/redshift/> |
+| 6 | **Tổng kết Database & Đánh giá bảo mật với AWS Security Hub** <br> - **Database Recap**: So sánh điểm khác biệt cốt lõi giữa Amazon RDS (cho OLTP) và Amazon Redshift (cho OLAP). <br> - **AWS Security Hub**: Tìm hiểu cơ chế Security Hub tự động kiểm tra cấu hình theo tiêu chuẩn ngành (PCI DSS), chấm điểm bảo mật (security score), quét liên tục để nhận diện rủi ro cấu hình sai. <br> - **Ôn tập tổng kết**: Review các dịch vụ bảo mật trong tuần (Organizations, Identity Center, KMS, Security Hub). | 29/05/2026 | 29/05/2026 | <https://docs.aws.amazon.com/securityhub/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Thứ 2 (25/05/2026):** Hiểu rõ khái niệm CSDL, mối quan hệ Khóa chính/Khóa ngoại và các phương pháp tối ưu hóa truy vấn. Đồng thời, nắm vững cơ chế quản lý tập trung nhiều tài khoản AWS (OU, Consolidated Billing) và chính sách kiểm soát quyền hạn SCP của AWS Organizations.
+* **Thứ 3 (26/05/2026):** Phân biệt được sự khác nhau giữa SQL và các nhóm NoSQL. Nắm vững tính năng của dịch vụ Amazon RDS (sao lưu tự động, Read Replica, Multi-AZ failover, mã hóa bảo mật).
+* **Thứ 4 (27/05/2026):** Hiểu rõ dịch vụ kho dữ liệu Amazon Redshift, kiến trúc xử lý song song MPP (Leader Node & Compute Nodes) và tối ưu hóa phân tích bằng Columnar storage.
+* **Thứ 5 (28/05/2026):** Hiểu cơ chế phân phối truy vấn song song của Redshift và cách sử dụng Redshift Spectrum để truy vấn trực tiếp dữ liệu trên S3 mà không cần load vào cluster.
+* **Thứ 6 (29/05/2026):** Phân biệt rõ các kịch bản sử dụng giữa dịch vụ OLTP (RDS/Aurora) và OLAP (Redshift). Đồng thời, nắm được cơ chế Security Hub quét và chấm điểm bảo mật để quản trị cấu hình hệ thống an toàn.

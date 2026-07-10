@@ -1,57 +1,43 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-04-27
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand how to use AWS Cost Management to manage costs and resources.
+* Master different budget types (Cost, Usage, Reservation, Savings Plans) and configure automated email/SNS alerts.
+* Practice creating, monitoring, and cleaning up cloud budgets.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | **Accessing Billing & Exploring AWS Budgets** <br> - Access AWS Management Console, navigate to **Billing**. <br> - Learn how to create budgets from available templates (Cost budget, Usage budget, RI budget, Savings Plans budget). <br> - Create a new Cost Budget: set budget name, period (monthly, quarterly, annually), starting month, choose budgeting method (fixed or auto-adjusting), and input the desired budget amount. | 04/27/2026 | 04/27/2026      | <https://docs.aws.amazon.com/cost-management/> |
+| 3   | **Configuring Cost Budget Alerts & Creating Usage Budgets** <br> - Set up alert thresholds for Cost Budget (based on actual or forecasted cost) and threshold percentage (% of budgeted amount). <br> - Configure email or Amazon SNS notifications when thresholds are exceeded. <br> - Create a Usage Budget: define resource or service usage to track (e.g. EC2 running hours, Data transfer), set allowed usage amount, and set alert thresholds. | 04/28/2026 | 04/28/2026      | <https://docs.aws.amazon.com/cost-management/> |
+| 4   | **Understanding and Creating Reservation Budgets (RI Budgets)** <br> - Differentiate and determine saving goals using Reserved Instances (RIs). <br> - Establish budgets to monitor the utilization or coverage of Reserved Instances. <br> - Configure alerts if utilization or coverage falls below expected levels. | 04/29/2026 | 04/29/2026      | <https://docs.aws.amazon.com/cost-management/> |
+| 5   | **Understanding and Creating Savings Plans Budgets** <br> - Establish budgets to track the utilization or coverage of Savings Plans. <br> - Similarly to RI budgets, configure alerts when these metrics fail to meet requirements. | 04/30/2026 | 04/30/2026      | <https://docs.aws.amazon.com/cost-management/> |
+| 6   | **Managing and Cleaning Up Unused Budgets** <br> - Learn how to manage, evaluate, and edit existing Budgets. <br> - Practice infrastructure cleanup: select unused budgets and confirm their deletion to maintain a clean dashboard. | 05/01/2026 | 05/01/2026      | <https://docs.aws.amazon.com/cost-management/> |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Monday (04/27/2026):**
+  * Mastered navigation of the Billing & Cost Management interface in the AWS Management Console.
+  * Acquired a clear understanding of the 4 budget templates: Cost, Usage, RI, and Savings Plans budgets.
+  * Created the first Cost Budget with customized billing periods, start months, and fixed/auto-adjusting budgeting methods.
+* **Tuesday (04/28/2026):**
+  * Gained proficiency in setting alert thresholds based on both actual and forecasted costs.
+  * Configured automatic email notifications for budget threshold crossings.
+  * Created a Usage Budget to monitor resource metrics, such as EC2 running hours and data transfer limits.
+* **Wednesday (04/29/2026):**
+  * Understood the concept of Reserved Instances (RIs) and set up Reservation Budgets for cost optimization.
+  * Learned to monitor RI utilization and coverage to ensure maximum savings and minimal wastage.
+* **Thursday (04/30/2026):**
+  * Grasped Savings Plans mechanics and configured a Savings Plans Budget.
+  * Configured proactive alerts for when Savings Plans utilization or coverage falls below targeted thresholds.
+* **Friday (05/01/2026):**
+  * Learned how to manage, edit, and evaluate existing cloud budgets.
+  * Practiced resource hygiene by clean-deleting unused test budgets from the AWS console.
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...

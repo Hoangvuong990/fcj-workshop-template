@@ -1,47 +1,36 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-07-09
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
+> Here, I would like to share my personal evaluation and feedback based on my practical experience during the internship with the First Cloud Journey (FCJ) program at AWS Vietnam:
 
 ### Overall Evaluation
 
 **1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+The working environment at AWS Vietnam is highly open, friendly, and encourages innovation. Even as an intern, I always felt respected and supported by my colleagues. The modern and professional workspace provided great inspiration to focus and complete my tasks effectively.
 
 **2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+My mentor provided exceptionally dedicated guidance and patiently answered all technical questions regarding UI/UX designs and frontend workflows. I highly appreciate my mentor's approach of encouraging me to research and propose solutions first before giving feedback and advice, rather than just hand out answers. The admin team was also very supportive of administrative tasks and documentation.
 
 **3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+As a **Cybersecurity** student at HUTECH, participating in UI design and security integration (such as Cognito authentication and client-side input control) for the Wakan project helped me understand how to build a real-world product that is both user-friendly and secure.
 
 **4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+The internship offered a great opportunity to improve my web development skills, get hands-on experience integrating AWS services (like Amazon Cognito), and learn professional Git practices. I also acquired valuable soft skills, such as user-centered design thinking and personal workflow management.
 
 **5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+The culture of the FCJ program is dynamic and collaborative. All members of the Wakan project team worked with a high sense of responsibility. Smooth coordination among Frontend, Backend, and AI contributors ensured steady progress, and everyone was always ready to debug issues together.
 
 **6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+The program provides a reasonable internship allowance and offers flexible working hours, which helped me balance my university schedule with the internship. The internal training workshops were also a major benefit.
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+### Personal Reflections
 
----
-
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+*   **What I found most satisfying during my internship:** Having the opportunity to build a real-world product leveraging cutting-edge AWS services and receiving deep, constructive feedback from my mentor to elevate my skills.
+*   **What I believe the program should improve:** The program already does an excellent job of encouraging interns to present and speak at events. As a Cybersecurity major, I would suggest incorporating more specialized topics or practical workshops on Cloud Security and secure development lifecycles (DevSecOps) to allow interns to dive deeper into security practices.
+*   **If recommending to a friend, would I suggest they intern here:** Absolutely. This is the ideal launchpad for students to experience a global corporate environment and acquire top-tier, practical work experience.

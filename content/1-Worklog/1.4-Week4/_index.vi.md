@@ -1,59 +1,30 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+date: 2026-05-11
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu tổng quan về dịch vụ máy chủ ảo Amazon EC2 (Elastic Compute Cloud).
+* Nắm vững các khái niệm và thành phần bổ trợ: AMI (Amazon Machine Image), EBS (Elastic Block Store), Instance Store, User Data và Metadata.
+* Hiểu cách thức hoạt động của Auto Scaling và tích hợp cân bằng tải để tăng tính sẵn sàng cao của hệ thống.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | **Tổng quan về Amazon EC2 (Elastic Compute Cloud)** <br> - Tìm hiểu khái niệm máy chủ ảo EC2, tính linh hoạt và khả năng co dãn tài nguyên. <br> - Nghiên cứu các nhóm ứng dụng thực tế (web hosting, database, authentication). <br> - Học cách lựa chọn Instance Type phù hợp theo nhu cầu CPU (Intel, AMD, Graviton), Memory, Network và Storage. | 11/05/2026 | 11/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 3 | **AMI, Cơ chế Sao lưu & Cặp khóa Bảo mật (Key Pair)** <br> - Tìm hiểu cách sử dụng AMI để khởi tạo hàng loạt instance đồng bộ chứa sẵn hệ điều hành và cấu hình phần mềm. <br> - Nghiên cứu quy trình sao lưu (backup) bằng snapshot cho ổ đĩa EBS. <br> - Tìm hiểu nguyên lý hoạt động của Key Pair (gồm public key lưu trên AWS và private key lưu trên máy cá nhân) để SSH an toàn. | 12/05/2026 | 12/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 4 | **Lưu trữ dạng khối với Amazon EBS (Elastic Block Store)** <br> - Tìm hiểu dịch vụ block storage EBS gắn trực tiếp vào EC2, phân biệt 2 loại ổ đĩa SSD và HDD. <br> - Nghiên cứu thiết kế độ tin cậy cao (99.999% SLA) thông qua việc tự động replicate dữ liệu giữa các storage node trong cùng một Availability Zone (AZ). <br> - Phân tích kiến trúc mạng độc lập của EBS giúp duy trì hoạt động riêng biệt với EC2. | 13/05/2026 | 13/05/2026 | <https://docs.aws.amazon.com/ebs/> |
+| 5 | **Bộ nhớ tạm thời Instance Store & Lý thuyết khởi tạo User Data** <br> - Nghiên cứu bộ nhớ lưu trữ tạm thời Instance Store (dựa trên ổ đĩa NVMe cục bộ trên physical node) cho các tác vụ cần IOPS cực cao nhưng mất dữ liệu khi stop instance. <br> - Tìm hiểu lý thuyết về EC2 User Data (chạy script tự động hóa bash shell hoặc PowerShell khi boot máy lần đầu). Biết được cơ chế kiểm tra User Data của instance thông qua địa chỉ IP Link-Local `http://169.254.169.254/latest/user-data`. | 14/05/2026 | 14/05/2026 | <https://docs.aws.amazon.com/ec2/> |
+| 6 | **Lý thuyết EC2 Metadata & Cơ chế co dãn tự động Auto Scaling** <br> - Tìm hiểu cơ chế hoạt động của EC2 Metadata: các thông tin liên quan tới bản thân EC2 instance (IP, Hostname, SG) được truy xuất tại địa chỉ Link-Local `http://169.254.169.254/latest/meta-data/`. <br> - Nghiên cứu EC2 Auto Scaling: cách thiết lập nhóm co dãn (Auto Scaling Group), chính sách co dãn (scaling policies) phối hợp cùng Load Balancer và phân bố máy chủ qua nhiều AZ. | 15/05/2026 | 15/05/2026 | <https://docs.aws.amazon.com/autoscaling/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Thứ 2 (11/05/2026):** Hiểu rõ khái niệm dịch vụ EC2 và cách phân loại Instance Type phù hợp theo yêu cầu tài nguyên phần cứng.
+* **Thứ 3 (12/05/2026):** Thành thạo lý thuyết khởi tạo máy từ AMI, cơ chế snapshot bảo vệ dữ liệu và sử dụng cặp khóa (Key Pair) để SSH bảo mật.
+* **Thứ 4 (13/05/2026):** Nắm vững kiến trúc hoạt động độc lập của EBS và cơ chế dự phòng dữ liệu tự động bên trong Availability Zone (AZ).
+* **Thứ 5 (14/05/2026):** Phân biệt được sự khác nhau giữa ổ đĩa EBS và ổ đĩa tạm thời Instance Store; nắm được khái niệm User Data dùng để chạy script tự động hóa khi khởi tạo máy thông qua địa chỉ Link-Local `169.254.169.254`.
+* **Thứ 6 (15/05/2026):** Hiểu cơ chế truy xuất thông tin cấu hình qua Metadata thông qua địa chỉ IP Link-Local và nguyên lý co dãn tự động (Auto Scaling) kết hợp Load Balancer trên nhiều AZ.

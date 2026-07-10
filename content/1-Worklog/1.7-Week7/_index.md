@@ -1,57 +1,30 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-01
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Participate in the Wakan project kickoff meeting, align on the feature scope of the service tiers (Free/Plus/Pro), and finalize the system architecture diagram.
+* Set up personal workspace environment (AWS IAM User, Git Repository, and branching strategy).
+* Conduct UX research and design UI Wireframes for the selection flow of the Wakan application.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | **Wakan Project Kickoff & Collaboration Setup** <br> - Participate in the project kickoff meeting with the team and align on the scope of service tiers (Free/Plus/Pro). <br> - Review the system architecture diagram, initialize the shared Git repository, and define the branching strategy. | 06/01/2026 | 06/01/2026 | |
+| 3 | **AWS IAM User Setup & Feature Analysis** <br> - Set up the personal AWS IAM User account for development and integration. <br> - Brainstorm with team members to clarify input data parameters for the user selection interface. | 06/02/2026 | 06/02/2026 | <https://docs.aws.amazon.com/iam/> |
+| 4 | **UX Research & Wireframing for Experience and Budget Selection** <br> - Analyze the user experience journey for planning trips. <br> - Design UI Wireframes for selecting experience types (activities, interests) and desired budgets. | 06/03/2026 | 06/03/2026 | |
+| 5 | **Wireframing for Transport, Companions, and Duration Selection** <br> - Continue designing wireframes for the subsequent selection steps: transport modes, travel companions, and trip duration/number of days. | 06/04/2026 | 06/04/2026 | |
+| 6 | **Finalizing UI Wireframes & Team Review** <br> - Consolidate and link all wireframes into a completed interactive prototype. <br> - Host an internal team review session to gather feedback, optimize the layout, and prepare for component building in the upcoming week. | 06/05/2026 | 06/05/2026 | |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Monday (06/01/2026):** Completed the project kickoff meeting, agreed on Wakan service tiers, and successfully initialized the Git repository and branching rules.
+* **Tuesday (06/02/2026):** Successfully set up the personal AWS IAM User account and defined the data flows required for the frontend design.
+* **Wednesday (06/03/2026):** Completed the initial UI wireframe layout for the experience category and budget selector interface.
+* **Thursday (06/04/2026):** Designed comprehensive wireframes for transport, companion, and duration selection steps.
+* **Friday (06/05/2026):** Finalized the interactive prototype link and aligned on the design interface with the team after the weekly review meeting.
