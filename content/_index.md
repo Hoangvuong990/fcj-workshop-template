@@ -28,7 +28,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 17/04/2026 to 10/07/2026
 
-![Your profile picture](/images/Dinhhoangvuong.png)
+<img src="/images/dinhhoangvuong.png" alt="Your profile picture" width="200" />
 
 ### Report Content
 
