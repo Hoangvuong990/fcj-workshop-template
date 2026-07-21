@@ -9,7 +9,7 @@ pre: " <b> 1.10. </b> "
 
 * Design the itinerary presentation layout including a timeline interface and visual map integration.
 * Optimize the application's responsiveness for mobile devices and tablets.
-* Participate in the initial end-to-end (E2E) testing workflow and debug integration errors with the team.
+* Participate in the initial end-to-end testing workflow and debug integration errors with the team.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |

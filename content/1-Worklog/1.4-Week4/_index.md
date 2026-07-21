@@ -8,7 +8,7 @@ pre: " <b> 1.4. </b> "
 ### Week 4 Objectives:
 
 * Understand the core concepts of Amazon Elastic Compute Cloud (EC2) virtual servers.
-* Master auxiliary components: AMI (Amazon Machine Image), EBS (Elastic Block Store), Instance Store, User Data, and Metadata.
+* Master auxiliary components: AMI, EBS, Instance Store, User Data, and Metadata.
 * Grasp the mechanics of Auto Scaling and its integration with Load Balancers for high availability.
 
 ### Tasks to be carried out this week:
